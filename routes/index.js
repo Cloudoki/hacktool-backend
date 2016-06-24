@@ -11,7 +11,7 @@ router.post('/login', function(req, res, next) {
 
   if( req.body.code == null)
     return res.json({ok:false});
-    
+
   try {
     request({
         url: "https://github.com/login/oauth/access_token",
@@ -20,11 +20,12 @@ router.post('/login', function(req, res, next) {
             'content-type': 'application/json',
         },
         json: {
-          client_id: ".|.",
-          client_secret: ".|.",
+          client_id: "55d515edbc303bfeaabe",
+          client_secret: "da4e21336d2826be68bab8d45c8551f3694e728d",
           code: req.body.code
         }
     }, function (error, response, body) {
+
       return res.json(body);
     });
   } catch(e){
