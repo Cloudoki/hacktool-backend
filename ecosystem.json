@@ -11,13 +11,13 @@
     "out_file"    : "/var/www/workers/hacktool/logs/out.log",
     "env": {
       "NODE_ENV": "development",
-      "HACKTOOL": 9770,
+      "HACKTOOL_PORT": 9770,
       "HACKTOOL_GITHUB_CLIENT_ID": "??",
       "HACKTOOL_GITHUB_CLIENT_SECRET": "??",
     },
     "env_production" : {
       "NODE_ENV": "production",
-      "HACKTOOL": 9770,
+      "HACKTOOL_PORT": 9770,
       "HACKTOOL_GITHUB_CLIENT_ID": "??",
       "HACKTOOL_GITHUB_CLIENT_SECRET": "??",
     }
