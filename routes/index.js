@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.post('/login', function(req, res, next) {
+router.post('/callback', function(req, res, next) {
 
   if( req.body.code == null)
     return res.json({ok:false});
