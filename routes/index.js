@@ -20,8 +20,8 @@ router.post('/login', function(req, res, next) {
             'content-type': 'application/json',
         },
         json: {
-          client_id: "55d515edbc303bfeaabe",
-          client_secret: "da4e21336d2826be68bab8d45c8551f3694e728d",
+          client_id: process.env.HACKTOOL_GITHUB_CLIENT_ID,
+          client_secret: process.env.HACKTOOL_GITHUB_CLIENT_SECRET,
           code: req.body.code
         }
     }, function (error, response, body) {

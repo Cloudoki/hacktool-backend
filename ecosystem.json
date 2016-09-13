@@ -1,0 +1,25 @@
+{
+  "apps" : [{
+    "name"        : "hacktool-oauth-callback",
+    "script"      : "bin/www",
+    "args"        : [],
+    "watch"       : false,
+    "node_args"   : "",
+    "merge_logs"  : true,
+    "cwd"         : "/var/www/workers/hacktool",
+    "error_file"  : "/var/www/workers/hacktool/logs/err.log",
+    "out_file"    : "/var/www/workers/hacktool/logs/out.log",
+    "env": {
+      "NODE_ENV": "development",
+      "HACKTOOL": 9770,
+      "HACKTOOL_GITHUB_CLIENT_ID": "??",
+      "HACKTOOL_GITHUB_CLIENT_SECRET": "??",
+    },
+    "env_production" : {
+      "NODE_ENV": "production",
+      "HACKTOOL": 9770,
+      "HACKTOOL_GITHUB_CLIENT_ID": "??",
+      "HACKTOOL_GITHUB_CLIENT_SECRET": "??",
+    }
+  }]
+}
