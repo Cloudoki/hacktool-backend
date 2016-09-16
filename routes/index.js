@@ -24,7 +24,12 @@ router.post('/callback', function(req, res, next) {
           client_secret: process.env.HACKTOOL_GITHUB_CLIENT_SECRET,
           code: req.body.code
         }
-    }, function (error, response, body) {
+    }, function (err, response, body) {
+
+      if( err ){
+        console.error("Error getting GitHub authenticated", err);
+        return res.json({ok:false, error: err});
+      }
 
       return res.json(body);
     });
